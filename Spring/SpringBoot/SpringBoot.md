@@ -59,3 +59,32 @@ public class SpringBoot01HelloQuickApplication {
 
 springboot版本仲裁中心
 以后我们导入依赖默认是不需要版本号的  但dependencies里面没有的还是需要
+
+
+
+
+注解
+
+
+@ResponseBody
+
+这个类的所有方法返回的数据直接返回给浏览器,如果是对象还自动转换为Json数据
+
+
+
+@PropertySource("classpath:datasource.properties")
+
+作用：加载指定的properties配置文件
+
+
+
+
+@Component //  将下面的组件加到容器中
+@ConfigurationProperties(prefix = "person")//只有这个组件是容器中的组件，才能提供到容器中
+@Validated
+
+
+@ImportResource
+作用：导入Spring配置文件，并且让这个配置文件生效
+
+
